@@ -32,7 +32,7 @@ from readfish.read_until import ReadUntilClient
 from minknow_api import protocol_service
 
 # Library
-from readfish._cli_args import DEVICE_BASE_ARGS, DEFAULT_UNBLOCK
+from readfish._cli_args import DEVICE_BASE_ARGS, DEFAULT_UNBLOCK, Chemistry
 from readfish._read_until_client import RUClient
 from readfish._config import Action, Conf, make_decision, _Condition
 from readfish._statistics import ReadfishStatistics
@@ -269,6 +269,7 @@ def run(
         throttle=args.throttle,
         dry_run=args.dry_run,
         toml=args.toml,
+        chemistry=Chemistry(args.chemistry),
     )
 
     # begin readfish function
